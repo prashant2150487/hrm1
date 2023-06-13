@@ -4,6 +4,8 @@ import { FaArrowLeft } from "react-icons/fa";
 import { MdOutlineNotifications } from "react-icons/md";
 import Navleftbar from "./Navleftbar";
 import avaratImg from "./photo-1542909168-82c3e7fdca5c.jpeg";
+import { Grid } from "@mui/material";
+import NavRight from "./NavRight";
 function NavComp() {
   return (
     <>
@@ -101,7 +103,6 @@ function NavComp() {
                 class="py-2 text-sm text-gray-700 dark:text-gray-200"
                 aria-labelledby="dropdownDelayButton"
               >
-
                 <li>
                   <a
                     href="#"
@@ -114,8 +115,17 @@ function NavComp() {
             </div>
           </div>
         </div>
-      </header >
-      <Navleftbar />
+      </header>
+      <div>
+        <Grid container>
+          <Grid xs={2}>
+            <Navleftbar />
+          </Grid>
+          <Grid>
+            <NavRight />
+          </Grid>
+        </Grid>
+      </div>
     </>
   );
 }
